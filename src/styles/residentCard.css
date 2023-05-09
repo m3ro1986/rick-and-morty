@@ -1,0 +1,117 @@
+.resident-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 1em;
+    overflow: hidden;
+    height: 100%;
+    min-width: 311px;
+    max-width: 550px;
+    background-color: var(--bglight-color);
+    transition: all 0.5s;
+    position: relative;
+}
+
+.resident-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(199, 90, 90, .5);
+    transition: all .3s;
+}
+
+.resident-container:hover::before{
+    width: 0;
+}
+
+.resident-container:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.resident-container article {
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.img-container {
+    margin: 0;
+    /* position: relative; */
+}
+
+/* .img-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(199, 90, 90, .5);
+    transition: all .3s;
+} */
+
+/* .img-container:hover::before {
+    width: 0;
+} */
+
+.resident-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title-name {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--grey);
+}
+
+.status-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--grey);
+    gap: 1em;
+}
+
+.status-container span:nth-child(2) {
+    font-size: 0.9em;
+}
+
+.Alive {
+    background-color: var(--greenlive);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.Dead {
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.unknown {
+    background-color: grey;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.resident-detail li {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.resident-detail span:nth-child(1) {
+    color: var(--grey);
+}
+
+.resident-detail span:nth-child(2) {
+    color: var(--white);
+}
