@@ -13,11 +13,15 @@ function App() {
 
     const handleSubmit = e => {
         e.preventDefault()
-        setIdLocation(e.target.firstChild.value)
+
+        if (e.target.firstChild.value === '') {
+            setIdLocation(0)
+        } else {
+            setIdLocation(e.target.firstChild.value)
+        }
+
         e.target.firstChild.value = "";
     }
-
-    console.log(idLocation)
 
     return (
         <>
@@ -34,7 +38,7 @@ function App() {
                     </div>
                 </header>
                 <article className='location-data'>
-                    <h1>{location?.name}</h1>
+                    <h1>{error ? <p>❌ location {idLocation} does not exist¡¡¡</p> : location?.name}</h1>
                     <ul>
                         <li><span>Type</span><span>{location?.type}</span></li>
                         <li><span>Dimension n°{idLocation}</span><span>{location?.dimension}</span></li>

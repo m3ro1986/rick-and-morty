@@ -4,7 +4,6 @@ import useUrl from '../hooks/useUrl';
 const ResidentCard = ({ url }) => {
 
     const [resident] = useUrl(url)
-    console.log(resident)
 
     return (
         <div className='resident-container'>
