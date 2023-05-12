@@ -56,21 +56,44 @@
   height: 100%;
   top: 0;
   right: 0;
-  background-color: var(--grey);
+  background-color: var(--bg-color);
   border-radius: 1em;
   transition: all 0.3s;
+  overflow: hidden;
+}
+
+.pages-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.page-button {
+  display: grid;
+  border-radius: 50%;
+  background-color: var(--bglight-color);
+  width: 3em;
+  aspect-ratio: 1;
+  font-weight: bolder;
+  place-content: center;
+  color: var(--rose);
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .bxs-left-arrow {
   position: absolute;
-  right: 0;
+  right: 0.5em;
   font-size: 1.5em;
-  color: var(--rose);
+  color: var(--greenlive);
 }
 
 .bxs-right-arrow {
   position: absolute;
-  right: 0;
+  right: 0.5em;
   font-size: 1.5em;
   color: var(--rose);
 }
@@ -85,8 +108,8 @@
   align-items: center;
   list-style: none;
   margin: 0 auto;
-  padding: 1em;
-  gap: 1em;
+  padding: 1em 2em;
+  gap: 1.5em;
   background-color: var(--bglight-color);
   border-radius: 1em;
   overflow: hidden;
