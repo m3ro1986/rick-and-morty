@@ -61,7 +61,8 @@
   border-radius: 1em;
   transition: all 0.3s;
   overflow: hidden;
-  border: 2px solid var(--rose);
+  border-top: 2px solid var(--rose);
+  border-right: 2px solid var(--rose);
 }
 
 
