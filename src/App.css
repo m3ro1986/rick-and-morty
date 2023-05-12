@@ -89,6 +89,7 @@
   gap: 1em;
   background-color: var(--bglight-color);
   border-radius: 1em;
+  overflow: hidden;
 }
 
 .location-data li {

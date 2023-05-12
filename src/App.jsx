@@ -13,7 +13,7 @@ function App() {
 
     const handleSubmit = e => {
         e.preventDefault()
-
+        setWitdh(0)
         if (e.target.firstChild.value === '') {
             setIdLocation(0)
         } else {
