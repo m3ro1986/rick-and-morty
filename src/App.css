@@ -52,6 +52,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 0%;
   height: 100%;
   top: 0;
@@ -61,6 +62,7 @@
   transition: all 0.3s;
   overflow: hidden;
 }
+
 
 .pages-container {
   display: flex;
@@ -74,17 +76,18 @@
 .page-button {
   display: grid;
   border-radius: 50%;
-  background-color: var(--bglight-color);
+  background-color: var(--grey);
   width: 3em;
   aspect-ratio: 1;
   font-weight: bolder;
   place-content: center;
-  color: var(--rose);
+  color: var(--greenlive);
   border: none;
   &:hover {
     cursor: pointer;
   }
 }
+
 
 .bxs-left-arrow {
   position: absolute;

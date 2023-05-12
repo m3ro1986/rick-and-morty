@@ -51,7 +51,9 @@ function App() {
             setInitialPage(totalResidents - perPages)
             setLastpage(totalResidents)
         }
+        
     }
+
 
     return (
         <>
@@ -80,7 +82,11 @@ function App() {
                                     arrayPages.length === 0
                                         ? <h4>This dimension only has one page</h4>
                                         : arrayPages.map(page => (
-                                            <button key={page} className='page-button' onClick={changePage}> {page} </button>
+                                            <button 
+                                                key={page} 
+                                                className='page-button' 
+                                                onClick={changePage}
+                                            > {page} </button>
                                         ))
 
                                 }
