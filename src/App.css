@@ -65,7 +65,9 @@
 .pages-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
+  padding: 0 2.5em;
   gap: 1em;
 }
 
