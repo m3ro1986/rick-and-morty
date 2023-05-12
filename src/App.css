@@ -48,11 +48,41 @@
   padding: 0.3em;
 }
 
+.pagination{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: var(--grey);
+  border-radius: 1em;
+  transition: all 0.3s;
+}
+
+.bxs-left-arrow {
+  position: absolute;
+  right: 0;
+  font-size: 1.5em;
+  color: var(--rose);
+}
+
+.bxs-right-arrow {
+  position: absolute;
+  right: 0;
+  font-size: 1.5em;
+  color: var(--rose);
+}
+
+
 .location-data ul{
+  position: relative;
   max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: center;
   list-style: none;
   margin: 0 auto;
   padding: 1em;

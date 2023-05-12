@@ -6,7 +6,7 @@ import ResidentCard from './components/ResidentCard'
 import Loader from './components/Loader'
 
 function App() {
-
+    const [witdh, setWitdh] = useState(0)
     const [idLocation, setIdLocation] = useState(getRandomLocation())
     const url = `https://rickandmortyapi.com/api/location/${idLocation}`
     const [location, error, isLoading] = useUrl(url)
@@ -23,6 +23,15 @@ function App() {
         e.target.firstChild.value = "";
     }
 
+    const changeWidth = () => {
+        if ( witdh === 0) {
+            setWitdh("100%")
+        } else {
+            setWitdh(0)
+        }
+    }
+
+    console.log(witdh)
     return (
         <>
             {isLoading && <Loader />}
@@ -43,7 +52,12 @@ function App() {
                         <li><span>Type</span><span>{location?.type}</span></li>
                         <li><span>Dimension n°{idLocation}</span><span>{location?.dimension}</span></li>
                         <li><span>Residents</span><span>{location?.residents.length}</span></li>
+                        <div className='pagination' style={{width:`${witdh}`}}>
+                            <h4>Pages</h4>
+                        </div>   
+                        <i className={ witdh === '100%' ? 'bx bxs-right-arrow' : 'bx bxs-left-arrow' } onClick={changeWidth} ></i>
                     </ul>
+                    
                 </article>
                 <main className='cards-container'>
                     {

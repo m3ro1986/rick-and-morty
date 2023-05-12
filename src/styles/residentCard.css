@@ -84,21 +84,24 @@
 .Alive {
     background-color: var(--greenlive);
     width: 10px;
-    height: 10px;
+    min-width: 10px;
+    aspect-ratio: 1;
     border-radius: 50%;
 }
 
 .Dead {
     background-color: red;
     width: 10px;
-    height: 10px;
+    min-width: 10px;
+    aspect-ratio: 1;
     border-radius: 50%;
 }
 
 .unknown {
     background-color: grey;
     width: 10px;
-    height: 10px;
+    min-width: 10px;
+    aspect-ratio: 1;
     border-radius: 50%;
 }
 
