@@ -52,7 +52,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   width: 0%;
   height: 100%;
   top: 0;
@@ -60,7 +60,7 @@
   background-color: var(--bg-color);
   border-radius: 1em;
   transition: all 0.3s;
-  overflow: hidden;
+  overflow-y: auto;
   border-top: 2px solid var(--rose);
   border-right: 2px solid var(--rose);
 }
@@ -72,21 +72,24 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 0 2.5em;
-  gap: 1em;
+  gap: 0.5em;
 }
 
 .page-button {
   display: grid;
   border-radius: 50%;
   background-color: var(--grey);
-  width: 2.5em;
+  width: 3em;
   aspect-ratio: 1;
   font-weight: bolder;
   place-content: center;
-  color: var(--greenlive);
+  color: var(--white);
   border: none;
+  transition: all 0.3s;
   &:hover {
     cursor: pointer;
+    transform: scale(1.1);
+    background-color: var(--rose);
   }
 }
 
@@ -115,7 +118,7 @@
   align-items: center;
   list-style: none;
   margin: 0 auto;
-  padding: 1em 2em;
+  padding: 2.5em 2em;
   gap: 1.5em;
   background-color: var(--bglight-color);
   border-radius: 1em;

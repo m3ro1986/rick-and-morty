@@ -33,6 +33,8 @@ function App() {
         }
 
         e.target.firstChild.value = "";
+        setInitialPage(0);
+        setLastpage(12)
     }
 
     const changeWidth = () => {
@@ -48,7 +50,7 @@ function App() {
             setInitialPage( perPages * e.target.innerText - perPages )
             setLastpage( perPages * e.target.innerText ) 
         } else {
-            setInitialPage(totalResidents - perPages)
+            setInitialPage(perPages * e.target.innerText - perPages)
             setLastpage(totalResidents)
         }
         
