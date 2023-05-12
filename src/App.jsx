@@ -6,8 +6,8 @@ import ResidentCard from './components/ResidentCard'
 import Loader from './components/Loader'
 
 function App() {
-    const [perPages, setPerPages] = useState(12);
-    const [lastpage, setLastpage] = useState(12)
+    const [perPages, setPerPages] = useState(15);
+    const [lastpage, setLastpage] = useState(15)
     const [initialPage, setInitialPage] = useState(0)
     const [witdh, setWitdh] = useState(0);
     const [idLocation, setIdLocation] = useState(getRandomLocation());
@@ -34,7 +34,7 @@ function App() {
 
         e.target.firstChild.value = "";
         setInitialPage(0);
-        setLastpage(12)
+        setLastpage(15)
     }
 
     const changeWidth = () => {
@@ -78,7 +78,7 @@ function App() {
                         <li><span>Dimension n°{idLocation}</span><span>{location?.dimension}</span></li>
                         <li><span>Residents</span><span>{location?.residents.length}</span></li>
                         <div className='pagination' style={{ width: `${witdh}` }}>
-                            <h4>Pages</h4>
+                            <h4>There are {perPages} cards per page</h4>
                             <div className='pages-container'>
                                 {
                                     arrayPages.length === 0
