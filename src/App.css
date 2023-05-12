@@ -78,7 +78,7 @@
   display: grid;
   border-radius: 50%;
   background-color: var(--grey);
-  width: 3em;
+  width: 2.5em;
   aspect-ratio: 1;
   font-weight: bolder;
   place-content: center;
