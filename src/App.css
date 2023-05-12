@@ -52,7 +52,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 0%;
   height: 100%;
   top: 0;
